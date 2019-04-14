@@ -1,0 +1,274 @@
+/* pages/shopCar/shopCar.wxss */
+/* 容器 */
+page{
+        background-color: #EFEFEF;
+}
+.bodyBox{
+        margin-top: 90rpx;
+        height: auto;
+        /* background-color: #EFEFEF; */
+}
+/* 顶部 */
+.hearder-img-box {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90rpx;
+}
+ .hearder-img-box .header-text {
+        display: block;
+        width: 100%;
+        height: 90rpx;
+        line-height: 90rpx;
+        color: #fff;
+        text-align: center;
+        background-repeat:no-repeat; 
+        background-size:100% 100%;
+} 
+
+/* 购物车盒子 */
+.cartBox{
+        height: auto;
+        width: 100%;
+        margin-bottom: 120rpx;
+}
+
+/* 商品列表 */
+.shopItemBox{
+        /* overflow: hidden; */
+        box-sizing: border-box;
+        width: 100%;
+        height: 220rpx;
+        padding: 20rpx 0;
+        background-color: #fff;
+        border: 1rpx solid #ddd;
+}
+.shopItemBox view{
+        box-sizing: border-box;
+}
+        /* 选择商品按钮 */
+.checkBox{
+        float: left;
+        width: 10%;
+        height:180rpx;
+        line-height: 210rpx;
+        /* padding-left: 6rpx; */
+        text-align: center;
+}
+icon{
+        height: 100%;
+        color: #E34752;
+}
+
+        /* 重置checkbox样式 */
+                /* 未被选中 */
+checkbox .wx-checkbox-input{
+        height: 50rpx;
+        border-color: #A7A7A7;
+        width: 50rpx;
+        border-radius: 50%;
+}
+                /* 被选中 */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+        border-color: #E34752;
+}
+                /* 对钩样式 */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+        color: #E34752;
+}
+
+        /* 商品图片 */
+.imgBox{
+        box-sizing: border-box;
+        float: left;
+        width: 20%;
+        line-height: 185rpx;
+        height: 100%;
+}
+.imgBox image{
+        overflow: hidden;
+        border-radius: 8rpx;
+        width: 100%;
+        height: 150rpx;
+        margin-top: 15rpx;
+}
+
+        /* 商品信息 */
+.goodInfo{
+        position: relative;
+        box-sizing: border-box;
+        width: 70%;
+        float: right;
+        display: block;
+        /* overflow: hidden; */
+        /* padding-left: 20rpx; */
+        padding: 10rpx 0 0 20rpx;
+}
+                /* 商品名称 */
+.goodTitle{
+        width: 100%;
+}
+.goodTitle text{
+        width: 100%;
+        height: 50rpx;
+        line-height: 50rpx;
+        font-size: 36rpx;
+        display: -webkit-box;
+        overflow: hidden;
+        font-weight: bold;
+
+        text-overflow: ellipsis;
+        white-space: normal;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+}
+
+                /* 商品规格 */
+.goodSpec{
+        margin-top: 10rpx;
+        color: #A8A7A5;
+        font-size: 32rpx;
+}
+.goodSpec text{
+        color: #24288C;
+}
+
+                /* 商品价格 */
+.priceBox{
+        margin-top: 10rpx;
+        color: #CE4729;
+}
+.priceBox text{
+        font-size: 36rpx;
+}
+
+                /* 加减商品个数 */
+.btnBox{
+        position: absolute;
+        bottom: -5rpx;
+        left: 230rpx;
+        width: 180rpx;
+        height: 62rpx;
+        text-align: center;
+        padding: 2rpx;
+        border: 4rpx solid #E3E3E3;
+        border-radius: 10rpx;
+}
+.alterBtn{
+        display: inline-block;
+        width: 50rpx;
+        height: 50rpx;
+        line-height: 50rpx;
+        background-color: #E34752;
+        color: #fff;
+        text-align: center;
+        border-radius: 10rpx;
+        font-size: 40rpx;
+}
+
+                /* 删除按钮 */
+.delBox{
+        position: absolute;
+        bottom: -5rpx;
+        right: 10rpx;
+        width: 90rpx;
+        height: 60rpx;
+        background-color: #E3E3E3;
+        line-height: 55rpx;
+        text-align: center;
+        border-radius: 6rpx;
+}
+.delBox text{
+        color: #717171;
+        font-size: 30rpx;
+}
+
+        /* 结算信息 */
+.accountBox{
+        position: fixed;
+        bottom: 0rpx;
+        left: 0;
+        width: 100%;
+        height: 100rpx;
+        color: #52514F;
+        background-color: #fff;
+        /* border: 1rpx solid #000; */
+        border-bottom: 1rpx solid #E5E5E5;
+        border-top: 1rpx solid #E5E5E5;
+}
+.accountBox view{
+        box-sizing: border-box;
+}
+.accountLeft{
+        width: 70%;
+        height: 100rpx;
+        padding: 0rpx 20rpx 0rpx 30rpx;
+        /* background-color: blue; */
+}
+.iconBox{
+        width: 35%;
+        display: inline-block;
+        height: 100%;
+        line-height: 100rpx;
+        font-size: 30rpx;
+        border-right: 1rpx solid #A7A7A7;
+}
+.iconBox icon{
+        float: left;
+        padding-top: 25rpx;
+}
+.iconBox text{
+        float: left;
+        margin-left: 15rpx;
+}
+
+.totalMsg{
+        padding-top: 15rpx;
+        font-size: 30rpx;
+        text-align: right;
+}
+.accountRight{
+        width: 30%;
+        height: 100%;
+        background-color: #D14627;
+        color: #fff;
+        text-align: center;
+        line-height: 100rpx;
+}
+
+/* 购物车空时展示页面 */
+
+.emptyShowBox{
+        background-color: #EDEDED;
+        width: 100%;
+        height: 100vh;
+}
+.contentBox{
+        width: 100%;
+        /* height: 100%; */
+        padding-top: 300rpx;
+}
+.contentBox .emptyImgBox{
+        width: 315rpx;
+        height: 260rpx;
+        margin: 0 auto;
+        /* display: block; */
+}
+.contentBox .emptyImgBox image{
+        width: 100%;
+        height: 100%;
+}
+.contentBox .textBox{
+        /* display: block; */
+        width: 100%;
+}
+.contentBox .textBox .textContent{
+        text-align: center;
+}
+.goShop{
+        display: block;
+        color: #D14627;
+        text-decoration: underline;
+}

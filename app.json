@@ -1,0 +1,41 @@
+{
+        "pages": [
+                "pages/index/index",
+                "pages/logs/logs",
+                "pages/goodDetail/goodDetail",
+                "pages/shopCar/shopCar",
+                "pages/mine/mine",
+                "pages/mineInfo/mineMsg",
+                "pages/confirmOfOrder/confirmOfOrder"
+        ],
+        "window": {
+                "backgroundTextStyle": "light",
+                "navigationBarBackgroundColor": "#F2F2F2",
+                "navigationBarTitleText": "FireCity",
+                "navigationBarTextStyle": "black"
+        },
+        "tabBar": {
+                "color": "#B2B2B2",
+                "selectedColor": "#282924",
+                "list": [
+                        {
+                                "pagePath": "pages/index/index",
+                                "text": "首页",
+                                "iconPath": "./images/home.png",
+                                "selectedIconPath": "./images/at-home.png"
+                        },
+                        {
+                                "pagePath": "pages/shopCar/shopCar",
+                                "text": "购物车",
+                                "iconPath": "./images/cart.png",
+                                "selectedIconPath": "./images/at-cart.png"
+                        },
+                        {
+                                "pagePath": "pages/mine/mine",
+                                "text": "我的",
+                                "iconPath": "./images/mine.png",
+                                "selectedIconPath": "./images/at-mine.png"
+                        }
+                ]
+        }
+}

@@ -1,0 +1,66 @@
+<!--pages/mine/mine.wxml-->
+<!-- <text>pages/mine/mine.wxml</text> -->
+
+
+<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+
+<scroll-view  scroll-y='true' class='bodyBox clearfix'>
+        <!-- 顶部 -->
+        <view class='hearder-img-box'>
+                <text class='header-text' style="background-image:url({{locPageHeaderBgImgUrl}} )">会员中心</text>
+        </view>
+        <!-- 用户头像 -->
+        <view class='vipMsgBox'>
+                <view class='vipInfo'>
+                        <image src="{{userInfo.avatarUrl}}"></image>
+                        <view class='userMsg'><text>{{userInfo.nickName}}</text></view>
+                </view>
+        </view>
+
+        <!-- 购物信息 -->
+        <view class='tradeMenusBox'>
+                <view wx:for="{{tradeMenuInfo}}"  class='tradeMenu'  bindtap="{{item.bindtapFn}}" data-tagtype="{{item.tagNum}}">
+                        <view class='tradeIcon'>
+                                <image src="{{item.imgUrl}}"></image>
+                        </view>
+                        <view class='tradeTitle'>{{item.title}}</view>
+                        <!-- <text class='tradeMsgLength'>1</text> -->
+                </view>
+        </view>
+
+        <!-- 其他信息 -->
+        <view class='otherMsgBox'>
+                <view class="msgItem {{item.classTag?'marginTop':''}}" wx:for="{{otherMsgData}}" bindtap='{{item.bindtapFn}}' data-tagtype="{{item.tagNum}}">
+                        <view class='mgsLeft fl'>
+                                <view class='imgBox fl'>
+                                        <image src="{{item.imgUrl}}"></image>
+                                </view>
+                                <view class='msgTitle fr'>{{item.title}}</view>
+                        </view>
+                        <view class='msgRight fr'>
+                                <view class='iconBox'>
+                                        <image src="{{openUrl}}"></image>
+                                </view>
+                        </view>
+                </view>
+        </view>
+
+        <!-- 点击联系客服时展示 -->
+        <view class='maskBox' wx:if="{{contactCustomerService}}" bindtap='hideMask'>
+                <view class='contentBox'>
+                        <view class='content_imgBox'>
+                                <image src='http://www.hs1105.com/static/home/images/kefu_code.jpg'></image>
+                        </view>
+                        <view class='content_textBox'>
+                               <text>长按识别添加美女客服微信</text>
+                        </view>
+                </view>
+                
+        </view>
+
+        <!-- 技术支持 -->
+        <view class='technicalMsgBox'>
+                <text decode="true">惠州市恒升信息科技有限公司 - 提供技术支持\n项目快速研发&nbsp;TEL(微信)： <text class='telNum'>13678987595</text></text>
+                
+        </view>
+</scroll-view>

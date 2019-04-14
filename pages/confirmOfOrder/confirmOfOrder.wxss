@@ -1,0 +1,232 @@
+/* pages/confirmOfOrder/confirmOfOrder.wxss */
+
+page{
+        background-color: #EFEFEF;
+}
+.bodyBox{
+        margin-top: 90rpx;
+        height: auto;
+        min-height: 300rpx;
+}
+.bodyBox view{
+        box-sizing: border-box;
+}
+/* 顶部 */
+.hearder-img-box {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90rpx;
+}
+ .hearder-img-box .header-text {
+        display: block;
+        width: 100%;
+        height: 90rpx;
+        line-height: 90rpx;
+        color: #fff;
+        text-align: center;
+        background-repeat:no-repeat; 
+        background-size:100% 100%;
+} 
+
+/* 顶部返回按钮 */
+.backImgBox{
+        position: fixed;
+        top: 0rpx;
+        left: 0rpx;
+        height: 90rpx;
+        width: 90rpx;
+        z-index: 101;
+}
+.backImgBox image{
+        width: 100%;
+        height: 100%;
+}
+
+/* 收货人信息 */
+.reciverInfoBox{
+        width: 100%;
+        height: auto;
+}
+.reciverContentBox{
+        position: relative;
+        width: 100%;
+        height: auto;
+        font-size: 32rpx;
+        padding: 30rpx 15rpx;
+        background-color: #fff;
+}
+.nameBox{
+        margin-right: 50rpx;
+}
+.phoneBox{
+        margin-right: 50rpx;
+}
+.addressBox{
+        margin: 20rpx 0 10rpx;
+        color: rgb(131, 131, 131);
+}
+/* 编辑按钮样式 */
+.editBtnBox{
+        position: absolute;
+        top: 15rpx;
+        right: 25rpx;
+        font-size: 32rpx;
+}
+.editBtnContent{
+        color: rgb(34, 41, 125);
+        text-decoration: underline;
+}
+/* 添加收货人信息 */
+.addReciverInfoBox{
+        width: 100%;
+        height: 90rpx;
+        line-height: 90rpx;
+        padding: 0 30rpx;
+        background-color: #fff;
+        font-size: 34rpx;
+        color:rgb(131, 131, 131);
+}
+.openImgBox{
+        /* margin-right: 30rpx; */
+}
+.openImgBox image{
+        width: 30rpx;
+        height: 30rpx;
+}
+
+/* 商品信息 */
+.goodsBox{
+        margin-top: 6rpx;
+        box-sizing: border-box;
+        width: 100%;
+}
+.goodsBox view{
+        box-sizing: border-box;
+}
+.shopItemBox{
+        position: relative;
+        /* margin-top: 10rpx; */
+        padding: 10rpx 15rpx;
+        background-color: #fff;
+        border-bottom: 1rpx solid #EFEFEF;
+}
+
+        /* 商品图片 */
+.imgBox{
+        box-sizing: border-box;
+        float: left;
+        width: 20%;
+        height: 100%;
+        margin-right: 15rpx;
+}
+.imgBox image{
+        overflow: hidden;
+        border-radius: 8rpx;
+        width: 100%;
+        height: 150rpx;
+        margin-top: 15rpx;
+}
+
+        /* 商品信息 */
+.goodInfo{
+        position: relative;
+        box-sizing: border-box;
+        width: 78%;
+        float: right;
+        display: block;
+        padding: 10rpx 0 20rpx;
+}
+                /* 商品名称 */
+.goodTitle{
+        width: 100%;
+}
+.goodTitle text{
+        width: 100%;
+        height: 50rpx;
+        line-height: 50rpx;
+        font-size: 36rpx;
+        display: -webkit-box;
+        overflow: hidden;
+        font-weight: bold;
+
+        text-overflow: ellipsis;
+        white-space: normal;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+}
+
+                /* 商品规格 */
+.goodSpec{
+        margin-top: 10rpx;
+        color: #A8A7A5;
+        font-size: 30rpx;
+}
+.goodSpec text{
+        color: #24288C;
+}
+
+                /* 商品价格 */
+.priceBox{
+        margin-top: 10rpx;
+        color: #CE4729;
+}
+.priceBox text{
+        font-size: 40rpx;
+}
+                /* 商品数量 */
+.goodNumBox{
+        position: absolute;
+        right: 20rpx;
+        bottom: 40rpx;
+        font-size: 32rpx;
+}
+
+/* 留言板 */
+.messageBoardBox{
+        width: 100%;
+        height: auto;
+        padding: 25rpx 15rpx 30rpx;
+        font-size: 36rpx;
+        background-color: #fff;
+}
+.messageBoardTitle{
+        margin-bottom: 25rpx;
+}
+.messageBoardContentBox textarea{
+        box-sizing: border-box;
+        width: 100%;
+        height: 180rpx;
+        background-color: #EFEFEF;
+        padding: 15rpx;
+        border-radius: 10rpx;
+}
+.placeholderStyleDetail{
+        font-size: 36rpx;
+}
+
+/* 立即付款 */
+.paymetBtnBox{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 90rpx;
+        background-color: #fff;
+}
+.paymetLeftBox{
+        width: 50%;
+        line-height: 90rpx;
+        text-align: center;
+        font-size: 34rpx;
+}
+.paymetRightBox{
+        width: 50%;
+        line-height: 90rpx;
+        text-align: center;
+        background-color: #CE4729;
+        color: #fff;
+        font-size: 34rpx;
+}

@@ -1,0 +1,393 @@
+/* pages/goodDetail/goodDetail.wxss */
+
+.bodyBox{
+        margin-top: 90rpx;
+        margin-bottom: 100rpx;
+        height: auto;
+        position: relative;
+        /* background-color: #EFEFEF; */
+}
+.bodyBox view{
+        box-sizing: border-box;
+}
+/* 顶部 */
+.hearder-img-box {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90rpx;
+}
+ .hearder-img-box .header-text {
+        display: block;
+        width: 100%;
+        height: 90rpx;
+        line-height: 90rpx;
+        color: #fff;
+        text-align: center;
+        background-repeat:no-repeat; 
+        background-size:100% 100%;
+} 
+
+/* 顶部返回按钮 */
+.backImgBox{
+        position: fixed;
+        top: 0rpx;
+        left: 0rpx;
+        height: 90rpx;
+        width: 90rpx;
+        z-index: 101;
+}
+.backImgBox image{
+        width: 100%;
+        height: 100%;
+}
+        /* 轮播图 */
+.swiperBox{
+        position: relative;
+}
+swiper{
+
+        width: 100%;
+        height: 680rpx;
+}
+swiper image{
+        width: 100%;
+        height: 100%;
+}
+/* 轮播图小圆点 */
+.dots{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 10rpx;
+        left: 0;
+}
+.dot{
+        display: inline-block;
+        box-sizing: border-box;
+        height: 20rpx;
+        width: 20rpx;
+        border: 2rpx solid #989495;
+        background-color: #DDDDDD;
+        border-radius: 50%;
+        margin: 0 10rpx;
+}
+.dot.active{
+        background-color:#B73E23;
+}
+
+/* 商品信息 */
+.goodMsgBox{
+        width: 100%;
+        height: auto;
+        padding: 15rpx;
+}
+.goodMsgBox .goodTitle{
+        width: 100%;
+        height: 100rpx;
+        line-height: 50rpx;
+}
+.goodMsgBox .goodTitle text{
+        font-size: 38rpx;
+        font-weight: bold;
+}
+
+.goodMsgBox .goodDetailInfo{
+        width: 100%;
+        height: 100%;
+        margin-top: 20rpx;
+}
+.goodMsgBox .goodDetailInfo text{
+        font-size: 34rpx;
+        color: #949694;
+}
+
+/* 商品价格 */
+.goodPriceBox {
+        width: 100%;
+        height: 100rpx;
+}
+.goodPriceBox .boxLeft{
+        width: 48%;
+        height: 100rpx;
+        line-height: 100rpx;
+}
+.goodPriceBox .boxLeft .fl text{
+        font-size: 48rpx;
+        color: #D64521;
+        font-weight: bold;
+}
+.goodPriceBox .boxLeft .fr text{
+       font-size: 28rpx;
+        color: #959593;
+        text-decoration: line-through;
+}
+.goodPriceBox .BoxRight{
+        text-align: right;
+        width: 52%;
+        height: 100rpx;
+        line-height: 100rpx;
+}
+.goodPriceBox .BoxRight .imgBox{
+        width: 25%;
+        height: 100%;
+        margin-top: 20rpx;
+}
+
+.goodPriceBox .BoxRight .imgBox image{
+        width: 60rpx;
+        height: 60rpx;
+}
+.goodPriceBox .BoxRight text{
+        padding-right: 30rpx;
+        font-size: 34rpx;
+        color: #E76D00;
+        text-decoration: underline;
+        text-decoration-color: #E76D00;
+}
+
+
+/* 商品服务 */
+.goodServicesBox{
+        width: 100%;
+        height: auto;
+        padding: 0 10rpx;
+        margin-top: 20rpx;
+
+}
+.goodServicesBox .goodServiceItem{
+        display: inline-block;
+        margin-right: 50rpx;
+}
+.goodServicePublicImgBox{
+        height: 50rpx;
+        line-height: 50rpx;
+}
+.goodServicePublicImgBox image{
+        width: 50rpx;
+        height: 50rpx;
+}
+.goodServiceItem text{
+        font-size: 34rpx;
+        color: #E76D00;
+}
+
+/* 商品信息介绍 */
+.goodIntroduceBox{
+        width: 100%;
+        padding: 15rpx 15rpx 0;
+}
+.goodIntroduceItem{
+        width: 100%;
+}
+.goodIntroduceItem image{
+        /* 去除多张图片之间的间隙,下面两个设置均可 */
+        /* display: block; */
+        vertical-align: top;
+        width: 100%;
+}
+
+
+/* 加入购物车 */
+.addToCartBox{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 90rpx;
+        width: 100%;
+        /* border-top: 3rpx solid #fff; */
+        background-color: #fff;
+}
+.addToCartBox .addCartBox{
+        width: 35%;
+        height: 100%;
+        text-align: center;
+}
+.addToCartBox .addCartBox .imgBox{
+        width: 100%;
+        height: 50%;
+}
+.addToCartBox .addCartBox .imgBox image{
+        width: 50rpx;
+        height: 50rpx;
+}
+.addToCartBox .addCartBox text{
+        display: block;
+        width: 100%;
+        height: 50%;
+        font-size: 24rpx;
+        padding-top: 5rpx;
+        color: #949694;
+}
+
+.addToCartBox .buyNowBox{
+        display: block;
+        width: 60%;
+        height: 100%;
+        text-align: center;
+        line-height: 90rpx;
+        font-size: 34rpx;
+        border-top: 6rpx solid #fff;
+        /* padding-top: 3rpx; */
+        background-color: #D64521;
+}
+.addToCartBox .buyNowBox text{
+        color: #fff;
+}
+
+/* 模态框 */
+.maskBox{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+}
+.mask{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 101;
+        background: rgba(0, 0, 0, 0.3);
+}
+.chouseSpecBox{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        /* height: 600rpx; */
+        z-index: 102;
+        background-color: #fff;
+}
+.goodImgBox{
+        position: absolute;
+        top: -80rpx;
+        left: 30rpx;
+}
+.goodImgBox image{
+        width: 160rpx;
+        height: 160rpx;
+        border-radius: 10rpx;
+        box-shadow: 0rpx 0rpx 5rpx #595959;
+}
+
+.maskGoodPriceBox{
+        width: 100%;
+        height: 80rpx;
+        line-height: 80rpx;
+}
+.maskGoodPriceBox text{
+        color: #D64521;
+        font-size: 48rpx;
+        margin-left: 200rpx;
+        font-weight: bold;
+}
+
+.goodSpecBox{
+        width: 100%;
+        margin-top: 20rpx;
+        /* border: 1rpx solid #595959; */
+}
+.goodSpecBox text{
+        display: inline-block;
+        min-width: 150rpx;
+        height: 65rpx;
+        line-height: 65rpx;
+        padding: 0 20rpx;
+        border: 1rpx solid #949694;
+        border-radius: 8rpx;
+        margin: 15rpx 15rpx;
+        text-align: center;
+        font-size: 30rpx;
+}
+.goodSpecBox text.active{
+        color: #fff;
+        background-color: #D64521;
+        border: 1rpx solid #D64521;
+}
+
+.wnnaBiyNums{
+        padding-left: 15rpx;
+        font-size: 36rpx;
+        line-height: 50rpx;
+        width: 100%;
+        margin-top: 60rpx;
+}
+.AddOrReduceNumBox{
+        display: inline-block;
+        width: 240rpx;
+        text-align: center;
+        height: 70rpx;
+        padding: 5rpx;
+        font-size: 32rpx;
+        border-radius: 10rpx;
+        margin-left: 40rpx;
+        border: 1rpx solid #949694;
+}
+.AddOrReduceNumBox .cartsBtn{
+        width: 55rpx;
+        height: 55rpx;
+        line-height: 45rpx;
+        border-radius: 10rpx;
+        background-color: #D64521;
+        color: #fff;
+        font-size: 75rpx;
+}
+
+.addToCartBtnBox{
+        width: 100%;
+}
+.addToCarBtn{
+        margin: 60rpx  auto 30rpx;
+        width: 80%;
+        height: 100rpx;
+        background-color: #D64521;
+        color: #fff;
+        text-align: center;
+        line-height: 100rpx;
+        border-radius: 10rpx;
+        box-shadow: 0rpx 0rpx 20rpx rgb(95, 30, 14);
+}
+.addToCarBtn text{
+        font-size: 36rpx;
+        font-weight: normal;
+}
+
+
+/* 页面跑丢了 */
+.lostPageBox{
+        display: inline-block;
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        padding-top: 500rpx;
+        color: #595959;
+        text-decoration: underline;
+        text-align: center;
+        background-color: #eee;
+}
+
+/* 返回顶部 */
+.toTop{
+        display: none;
+}
+.toTop.btnshow{
+        display: block;
+        position: fixed;
+        bottom: 150rpx;
+        right: 30rpx;
+        width: 80rpx;
+        height: 80rpx;
+        line-height: 80rpx;
+        text-align: center;
+        background-color: #FAEFED;
+        border-radius: 50%;
+}
+.toTop image{
+        width: 80rpx;
+        height: 80rpx;
+}

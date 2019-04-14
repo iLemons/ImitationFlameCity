@@ -1,0 +1,68 @@
+<!--pages/shopCar/shopCar.wxml-->
+<!-- <text>pages/shopCar/shopCar.wxml</text> -->
+<!-- 顶部 -->
+        <view class='hearder-img-box'>
+                <text class='header-text' style="background-image:url({{locPageHeaderBgImgUrl}} )">购物车</text>
+        </view>
+<scroll-view  scroll-y='true' class='bodyBox clearfix' wx:if="{{locWanaBuyArr.length>0}}">
+        <view class='cartBox'>
+                <view class='shopItemBox clearfix' wx:for="{{locWanaBuyArr}}">
+                        <view class='checkBox'>
+                                <icon wx:if="{{item.isSelected && item.wnnaBuyNum}}" type="success_circle" color="#E34752" size="30" bindtap="alterStatus" data-index="{{index}}" data-isSelected="{{item.isSelected}}"/>
+                                <icon wx:else type="circle" bindtap="alterStatus" size="30" data-index="{{index}}" data-isSelected="{{item.isSelected}}"/>
+                        </view>
+
+                        <view class='imgBox'>
+                                <image src="{{item.goodImgUrl}}"></image>
+                        </view>
+                        <view class='goodInfo clearfix'>
+                                <view class='goodTitle'><text>{{item.goodName}}</text></view>
+                                <!-- <view class='goodSpec'>规格：<text>{{item.goodSpec[0]}}</text></view> -->
+                                <view class='goodSpec'>规格：<text wx:for="{{item.goodSpec}}" wx:if="{{item.isChose}}">{{item.spec}}</text></view>
+                                <view class='priceBox'><text>￥{{item.goodPrice}}</text></view>
+                                <view class='btnBox'>
+                                        <text class='alterBtn fl' bindtap='goodNumReduce' data-index="{{index}}">-</text>
+                                        <text>{{item.wnnaBuyNum}}</text>
+                                        <text class='alterBtn fr' bindtap='goodNumAdd' data-index="{{index}}">+</text>
+                                </view>
+                                <view class='delBox'> 
+                                        <text class='delBtn' bindtap='removeGood' data-index='{{index}}'>移除</text>
+                                </view>
+                        </view>
+                </view>
+        </view>
+        
+        <!-- 结算部分 -->
+        <view class='accountBox'>
+                <view class='accountLeft fl'>
+                        <view class='iconBox'>
+                                <icon wx:if="{{checkedAll}}" type="success_circle" color="#E34752" size="28" bindtap="selectAll" />
+                                <icon wx:else type="circle" bindtap="selectAll" size="28" />
+                        <text>全选</text>
+                        </view>
+                        <view class='totalMsg fr'>
+                                <view class='totalNum'>共 <text class='color-red'>{{totalGoods}}</text> 件商品
+                                </view>
+                                <view class='totalMoney'>合计 :<text class='color-red'>￥{{totalMoney?totalMoney:'0.00'}}</text>
+                                </view>
+                        </view>
+                </view>
+                <view class='accountRight fr'>
+                        <view class='accountBtn' bindtap='goToconfirmOfOrderPage'>
+                                <text>去结算</text>
+                        </view>
+                </view>
+                
+        </view>
+</scroll-view>
+
+<view class='emptyShowBox' wx:else>
+        <view class='contentBox'>
+                <view class='emptyImgBox'>
+                        <image src='http://www.hs1105.com/static/home/css/css_public/empty.png'></image>
+                </view>
+                <view class='textBox'>
+                        <view class='textContent'>OH~购物车空空如也\n<text class='goShop' bindtap='goShopping'>去逛逛</text></view>
+                </view>
+        </view>
+</view>

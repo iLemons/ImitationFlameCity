@@ -1,0 +1,337 @@
+<!--pages/mineInfo/mineMsg.wxml-->
+        <!-- 待付款 -->
+<view  class='bodyBox clearfix' wx:if="{{pendingPayment}}" >
+        <!-- 顶部返回按钮 -->
+        <view class='backImgBox' bindtap='backToAheadPage'><image src='http://www.hs1105.com/static/home/css/css_public/back.png'></image></view>
+        <!-- 顶部 -->
+        <view class='hearder-img-box'>
+                <text class='header-text' style="background-image:url({{locPageHeaderBgImgUrl}} )">待付款</text>
+        </view>
+        <!-- 内容部分 -->
+        <view wx:if="{{currentExhibitionData}}">
+                        <!-- <view class='bodyContentBox'>
+                                <view class='contentBoxImgBox'>
+                                        <image src='../../images/mine/daili.png'  mode="widthFix" bindlongtap='aaa'></image>
+                                </view>
+                        </view> -->
+        </view>
+
+        <!-- 页面没有内容时为空 -->
+        <view class='emptyShowBox' wx:else>
+                <view class='contentBox'>
+                        <view class='emptyImgBox'>
+                                <image src='http://www.hs1105.com/static/home/css/css_public/empty.png'></image>
+                        </view>
+                        <view class='textBox'>
+                                <view class='textContent'>OH~暂时没有内容</view>
+                        </view>
+                </view>
+        </view>
+</view>
+
+        <!-- 待发货 -->
+<view  class='bodyBox clearfix' wx:if="{{toBeDelivered}}" >
+        <!-- 顶部返回按钮 -->
+        <view class='backImgBox' bindtap='backToAheadPage'><image src='http://www.hs1105.com/static/home/css/css_public/back.png'></image></view>
+        <!-- 顶部 -->
+        <view class='hearder-img-box'>
+                <text class='header-text' style="background-image:url({{locPageHeaderBgImgUrl}} )">待发货</text>
+        </view>
+        <!-- 内容部分 -->
+        <view wx:if="{{currentExhibitionData}}">
+                        <!-- <view class='bodyContentBox'>
+                                <view class='contentBoxImgBox'>
+                                        <image src='../../images/mine/daili.png'  mode="widthFix" bindlongtap='aaa'></image>
+                                </view>
+                        </view> -->
+        </view>
+
+        <!-- 页面没有内容时为空 -->
+        <view class='emptyShowBox' wx:else>
+                <view class='contentBox'>
+                        <view class='emptyImgBox'>
+                                <image src='http://www.hs1105.com/static/home/css/css_public/empty.png'></image>
+                        </view>
+                        <view class='textBox'>
+                                <view class='textContent'>OH~暂时没有内容</view>
+                        </view>
+                </view>
+        </view>
+</view>
+
+        <!-- 待收货 -->
+<view  class='bodyBox clearfix' wx:if="{{pendingReceipt}}" >
+        <!-- 顶部返回按钮 -->
+        <view class='backImgBox' bindtap='backToAheadPage'><image src='http://www.hs1105.com/static/home/css/css_public/back.png'></image></view>
+        <!-- 顶部 -->
+        <view class='hearder-img-box'>
+                <text class='header-text' style="background-image:url({{locPageHeaderBgImgUrl}} )">待收货</text>
+        </view>
+        <!-- 内容部分 -->
+        <view wx:if="{{currentExhibitionData}}">
+                        <!-- <view class='bodyContentBox'>
+                                <view class='contentBoxImgBox'>
+                                        <image src='../../images/mine/daili.png'  mode="widthFix" bindlongtap='aaa'></image>
+                                </view>
+                        </view> -->
+        </view>
+
+        <!-- 页面没有内容时为空 -->
+        <view class='emptyShowBox' wx:else>
+                <view class='contentBox'>
+                        <view class='emptyImgBox'>
+                                <image src='http://www.hs1105.com/static/home/css/css_public/empty.png'></image>
+                        </view>
+                        <view class='textBox'>
+                                <view class='textContent'>OH~暂时没有内容</view>
+                        </view>
+                </view>
+        </view>
+</view>
+
+       <!-- 待评价 -->
+<view  class='bodyBox clearfix' wx:if="{{toBeEvaluated}}" >
+        <!-- 顶部返回按钮 -->
+        <view class='backImgBox' bindtap='backToAheadPage'><image src='http://www.hs1105.com/static/home/css/css_public/back.png'></image></view>
+        <!-- 顶部 -->
+        <view class='hearder-img-box'>
+                <text class='header-text' style="background-image:url({{locPageHeaderBgImgUrl}} )">待评价</text>
+        </view>
+        <!-- 内容部分 -->
+        <view wx:if="{{currentExhibitionData}}">
+                        <!-- <view class='bodyContentBox'>
+                                <view class='contentBoxImgBox'>
+                                        <image src='../../images/mine/daili.png'  mode="widthFix" bindlongtap='aaa'></image>
+                                </view>
+                        </view> -->
+        </view>
+
+        <!-- 页面没有内容时为空 -->
+        <view class='emptyShowBox' wx:else>
+                <view class='contentBox'>
+                        <view class='emptyImgBox'>
+                                <image src='http://www.hs1105.com/static/home/css/css_public/empty.png'></image>
+                        </view>
+                        <view class='textBox'>
+                                <view class='textContent'>OH~暂时没有内容</view>
+                        </view>
+                </view>
+        </view>
+</view>
+
+        <!-- 已完成 -->
+<view  class='bodyBox clearfix' wx:if="{{completed}}" >
+        <!-- 顶部返回按钮 -->
+        <view class='backImgBox' bindtap='backToAheadPage'><image src='http://www.hs1105.com/static/home/css/css_public/back.png'></image></view>
+        <!-- 顶部 -->
+        <view class='hearder-img-box'>
+                <text class='header-text' style="background-image:url({{locPageHeaderBgImgUrl}} )">已完成</text>
+        </view>
+        <!-- 内容部分 -->
+        <view wx:if="{{currentExhibitionData}}">
+                        <!-- <view class='bodyContentBox'>
+                                <view class='contentBoxImgBox'>
+                                        <image src='../../images/mine/daili.png'  mode="widthFix" bindlongtap='aaa'></image>
+                                </view>
+                        </view> -->
+        </view>
+
+        <!-- 页面没有内容时为空 -->
+        <view class='emptyShowBox' wx:else>
+                <view class='contentBox'>
+                        <view class='emptyImgBox'>
+                                <image src='http://www.hs1105.com/static/home/css/css_public/empty.png'></image>
+                        </view>
+                        <view class='textBox'>
+                                <view class='textContent'>OH~暂时没有内容</view>
+                        </view>
+                </view>
+        </view>
+</view>
+
+
+        <!-- 我的资产 -->
+<view class='bodyBox clearfix' wx:if="{{becomeAgent}}">
+        <!-- 顶部返回按钮 -->
+        <view class='backImgBox' bindtap='backToAheadPage'><image src='http://www.hs1105.com/static/home/css/css_public/back.png'></image></view>
+        <!-- 顶部 -->
+        <view class='hearder-img-box'>
+                <text class='header-text' style="background-image:url({{locPageHeaderBgImgUrl}} )">成为代理</text>
+        </view>
+        <!-- <view wx:if="{{currentExhibitionData}}"> -->
+                        <!-- 内容部分 -->
+                        <view class='bodyContentBox'>
+                                <view class='contentBoxImgBox'>
+                                        <image src='http://www.hs1105.com/static/home/images/daili.png'  mode="widthFix" bindlongtap='aaa'></image>
+                                </view>
+                        </view>
+        <!-- </view> -->
+
+</view>
+
+
+        <!-- 收货地址 -->
+<view  class='bodyBox clearfix' wx:if="{{shippingAddress}}" >
+        <!-- 顶部返回按钮 -->
+        <view class='backImgBox' bindtap='backToAheadPage'><image src='http://www.hs1105.com/static/home/css/css_public/back.png'></image></view>
+        <!-- 顶部 -->
+        <view class='hearder-img-box'>
+                <text class='header-text' style="background-image:url({{locPageHeaderBgImgUrl}} )">收货地址</text>
+        </view>
+        <!-- 内容部分 -->
+        <view class='shipAddressContenBox'>
+                        <!-- 姓名 -->
+                <view class="section">
+                        <view class="section__title" >收货人名:</view>
+                        <input value="{{receiverMsg.name}}" bindinput="personNameInput" placeholder="请填写收货人姓名"  placeholder-class="placeholderStyle"/>
+                </view>
+                        <!-- 手机号 -->
+                <view class="section">
+                        <view class="section__title">手机号码:</view>
+                        <input value="{{receiverMsg.phone}}" bindinput="personPhoneNumInput" placeholder="请填写手机号码" placeholder-class="placeholderStyle"/>
+                </view>
+                        <!-- 详细地址 -->
+                <view class="section detailAddress">
+                        <view class="section__title ">详细地址:</view>
+                        <view class='textBox'>
+                        <textarea value="{{receiverMsg.address}}" bindinput="detailAddressInput" placeholder="请填写详细地址" placeholder-class="placeholderStyleDetail"/>
+                        </view>
+                </view>
+
+                <!-- 保存按钮 -->
+                <view class='saveBtnBox'>
+                        <view class='saveBtnContent'>
+                                <view class='saveBtn' bindtap='saveAddressMsg'>立即保存</view>
+                        </view>
+                </view>
+                
+        </view>
+</view>
+
+        <!-- 关于我们 -->
+<view class='bodyBox clearfix' wx:if="{{aboutUs}}">
+                <!-- 顶部返回按钮 -->
+        <view class='backImgBox' bindtap='backToAheadPage'><image src='http://www.hs1105.com/static/home/css/css_public/back.png'></image></view>
+                <!-- 顶部 -->
+        <view class='hearder-img-box'>
+                <text class='header-text' style="background-image:url({{locPageHeaderBgImgUrl}} )">关于我们</text>
+        </view>
+                <!-- 内容部分 -->
+        <view class='bodyContentBox'>
+                        <!-- 内容顶部 -->
+                <view class='contentTopBox'>
+                        <view>官方客服：<text class='color-red'>hs13678987898 (微信)</text> </view>
+                        <view>客服电话：<text class='customerTelCol'>12345678988</text> </view>
+                        <view>工作时间：<text class='color-red'>24小时服务</text> </view>
+                        <view>微信公众号：<text class='color-red'>火焰商城 (长按二维码关注)</text> </view>
+                        <view class='contentTop_imgBox'>
+                                <view class='contentTopImg'>
+                                        <image src='http://www.hs1105.com/static/home/images/code.jpg'></image>
+                                </view>                        
+                        </view>
+                </view>
+                        <!-- 标题 -->
+                <view class='commonProblemTitle'>
+                        <text class='color-red'>客服常见问题</text>
+                </view>
+                        <!-- 客服常见问题内容 -->
+                <view class='commonCustomerProblemBox'>
+                        <view class='questionBox'>
+                                <view class='question'>平台商品是否有保障？</view>
+                                <view class='answerBox'>
+                                        <text>平台所有产品都有质量保障！</text><text class='spcStyle'> 高品质，更精致！</text>
+                                        <view class='addMarginTop'>
+                                                <text class='addMarginTop'>如有问题，平台定会给予退换！</text>
+                                        </view>
+                                </view>
+                        </view>
+                        <view class='questionBox'>
+                                <view class='question'>我拍下来后的商品什么时候发货？</view>
+                                <text>您购买成功后除特殊商品外，商家将在48小时内发货。以下情况除外：\n</text>
+                                <view class='addMarginTop'>
+                                        <text>1.预售及其他特殊情形商品，商品会在约定发货时间内安排发货，发货时间以商家商品描述页面为准</text>
+                                </view>
+                                <view class='addMarginTop'>
+                                        <text>2.如遇春节物流放假不再揽货时，将在物流上班时第一时间发货。</text>
+                                </view>
+                        </view>
+                        <view class='questionBox'>
+                                <view class='question'>没有收到货/商家发错地址了怎么办？</view>
+                                <text>买家可自行查询快递信息，需要时可联系客服给予解决！</text>
+                        </view>
+                        <view class='questionBox'>
+                                <view class='question'>收到商品有问题怎么办？</view>
+                                <text>买家可以先联系卖家客服，并提供实物图片确认问题是否属实。如果确认商品问题，或无法说明商品是否合格，卖家应与买家协商解决；若因商品问题商家拒绝处理，可以要求客服介入处理。</text>
+                        </view>
+                        <view class='questionBox'>
+                                <view class='question'>如何联系商家客服？</view>
+                                <text>1.您可在“我的”页面点击“联系客服”联系商家。</text>
+                                 <view class='addMarginTop'>
+                                        <text>2.您也可在本页面顶部联系卖家。</text>
+                                </view>
+                        </view>
+
+                </view>
+
+        </view>
+</view>
+
+
+        <!-- 意见反馈 -->
+<view  class='bodyBox clearfix' wx:if="{{feedBack}}" >
+        <!-- 顶部返回按钮 -->
+        <view class='backImgBox' bindtap='backToAheadPage'><image src='http://www.hs1105.com/static/home/css/css_public/back.png'></image></view>
+        <!-- 顶部 -->
+        <view class='hearder-img-box'>
+                <text class='header-text' style="background-image:url({{locPageHeaderBgImgUrl}} )">意见反馈</text>
+        </view>
+        <!-- 内容部分 -->
+        <view class='feedBacktextBox'>
+                        <!-- 反馈意见 -->
+                <view class="feedBackcontentBox">
+                        <view class='feedBackcontent'>
+                                <textarea  bindinput="bindKeyInput" placeholder="请输入10-150字符的意见" placeholder-class="placeholderStyleDetail" bindinput='acountNum' maxlength='150'/>
+                        </view>
+
+                        <view class='textAcountBox'>
+                                <view class='acountBox'>
+                                        <text class='color-red'>{{inputCharacterNum}}</text><text>/150</text>
+                                </view>
+                        </view>
+                </view>
+
+                        <!-- 图片上传 -->
+                <view class='updateImgTitleBox'>
+                        <view class='upImgContentBox'>
+                                <view class='upImgTitle'>请上传图片（选填）</view>
+                        </view>
+                </view>
+
+                <view class='updateImgBtnBox'>
+
+                        <block wx:for="{{upImgArr}}">  
+                                <view class='upImgBox'>  
+                                        <image src='{{item}}'></image>  
+                                </view>  
+                        </block> 
+
+                        <view class='upImgBtnContentBox' bindtap='chooseImg'>
+                                <!-- <view></view> -->
+                                <image src='http://www.hs1105.com/static/home/images/add-pic.png'></image>
+                        </view>
+                </view>
+
+                <!-- 保存按钮 -->
+                <view class='saveBtnBox'>
+                        <view class='saveBtnContent'>
+                                <view class='saveBtn'>提交</view>
+                        </view>
+                </view>
+                
+        </view>
+</view>
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!--pages/confirmOfOrder/confirmOfOrder.wxml-->
+<view  class='bodyBox clearfix' >
+        <!-- 顶部 -->
+        <view class='hearder-img-box'>
+                <text class='header-text' style="background-image:url({{locPageHeaderBgImgUrl}} )">确认订单</text>
+        </view>
+         <!-- 顶部返回按钮 -->
+        <view class='backImgBox' bindtap='backToAheadPage'><image src='http://www.hs1105.com/static/home/css/css_public/back.png'></image></view>
+
+        <!-- 收货人信息 -->
+                <view class='reciverInfoBox'>
+                        <view class='reciverContentBox clearfix' wx:if="{{locreciverInfo}}">
+                                <view class='nameBox fl'>收货人：{{locreciverInfo.name}}</view>
+                                <view class='phoneBox fl'>联系方式：{{locreciverInfo.phone}}</view>
+                                <view class='addressBox fl'>{{locreciverInfo.address}}</view>
+                                <!-- 编辑按钮 -->
+                                <view class='editBtnBox'>
+                                        <view class='editBtnContent'>编辑</view>
+                                </view>
+                        </view>
+                        <view wx:else class='addReciverInfoBox'>
+                                <view class='fl'>添加收货地址</view>
+                                <view class='openImgBox fr'>
+                                        <image src='http://www.hs1105.com/static/home/css/css_public/open.png'></image>
+                                </view>
+                        </view>
+                        
+                </view>
+
+        <!-- 商品信息 -->
+
+        <view class='goodsBox clearfix'>
+                <view class='shopItemBox clearfix' wx:for="{{locWanaBuyArr}}">
+                        <view class='imgBox'>
+                                <image src="{{item.goodImgUrl}}"></image>
+                        </view>
+                        <view class='goodInfo clearfix'>
+                                <view class='goodTitle'><text>{{item.goodName}}</text></view>
+                                <!-- <view class='goodSpec'>规格：<text>{{item.goodSpec[0]}}</text></view> -->
+                                <view class='goodSpec'>规格：<text wx:for="{{item.goodSpec}}" wx:if="{{item.isChose}}">{{item.spec}}</text></view>
+                                <view class='priceBox'><text>￥{{item.goodPrice}}</text></view>
+
+                        </view>
+                        <view class='goodNumBox'>
+                                <view>×{{item.wnnaBuyNum}}</view>
+                        </view>
+                </view>
+        
+        </view>
+
+        <!-- 留言信息 -->
+        <view class='messageBoardBox '>
+                <view class='messageBoardTitle'>购买留言（选填）</view>
+                <view class='messageBoardContentBox'>
+                        <textarea placeholder="请输入您的购买留言..." placeholder-class="placeholderStyleDetail"></textarea>
+                </view>
+        </view>
+
+
+        <!-- 付款按钮 -->
+        <view class='paymetBtnBox'>
+                <view class='paymetLeftBox fl'>合计：<text class='color-red'>￥{{totalPrice}}</text></view>
+                <view class='paymetRightBox fr'>立即付款</view>
+        </view>
+
+</view>

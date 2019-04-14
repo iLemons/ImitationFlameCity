@@ -1,0 +1,158 @@
+<!--pages/goodDetail/goodDetail.wxml-->
+ <!-- 顶部 -->
+        <view class='hearder-img-box'>
+                <text class='header-text' style="background-image:url({{locPageHeaderBgImgUrl}} )">商品详情</text>
+        </view>
+        <!-- 顶部返回按钮 -->
+        <view class='backImgBox' bindtap='backToAheadPage'><image src='http://www.hs1105.com/static/home/css/css_public/back.png'></image></view>
+
+<scroll-view  scroll-y='' class='bodyBox clearfix' wx:if="{{currentExhibitionData123}}">
+        <view class='detailPageBox' wx:for="{{currentExhibitionData123}}">
+                <!-- 轮播图 -->
+                <view class='swiperBox'>
+                        <swiper autoplay="{{autoplay}}"
+                                interval="{{interval}}"
+                                duration="{{duration}}"
+                                circular="{{circular}}"
+                                current="{{currentSwiper}}"
+                                bindchange='swiperChange'
+                                indicator-color="{{indicatorColor}}"
+                                indicator-active-color="{{indicatorActiveColor}}"
+                                class='bannerBox' >
+                                <block wx:for="{{item.goodBannerImgUrl}}">
+                                <swiper-item>
+                                <image src="{{item}}" class="slide-image" />
+                                </swiper-item>
+                                </block>
+                        </swiper>
+                        <!-- 重置小圆点 -->
+                        <view class='dots'>
+                                <block wx:for="{{item.goodBannerImgUrl}}">
+                                        <view class="dot {{index == currentSwiper?'active':''}}"></view>
+                                </block>
+                        </view>
+                </view>
+
+                <!-- 商品信息 -->
+                <view class='goodMsgBox'>
+                        <view class='goodTitle'>
+                                <text>{{item.goodName}}</text>
+                        </view>
+                        <view class='goodDetailInfo'>
+                                <text>{{item.goodDetailMsg}}</text>
+                        </view>
+                </view>
+
+                <!-- 商品价格 -->
+                <view class='goodPriceBox'>
+                        <view class='boxLeft fl'>
+                                <view class='fl'><text>￥{{item.goodPrice}}</text></view>
+                                <view class='fr' wx:if="{{item.oldPrice}}"><text>原价：{{item.oldPrice}}</text></view>
+                        </view>
+                        <view class='BoxRight fr'>
+                                <view class='imgBox fl'><image src='http://www.hs1105.com/static/home/images/kefu.png'></image></view>
+                                
+                                <text class='fr'>平台所有产品包邮</text>
+                        </view>
+                </view>
+
+                <!-- 商品服务 -->
+                <view class='goodServicesBox'>
+                        <view class='goodServiceItem' wx:for="{{item.goodServicesData}}">
+                                <view class='goodServicePublicImgBox fl'>
+                                        <image src='http://www.hs1105.com/static/home/images/check.png'></image>
+                                </view>
+                                <text class='fr'>{{item}}</text>
+                        </view>
+                </view>
+
+                <!-- 商品介绍 -->
+                <view class='goodIntroduceBox'>
+                        <view class='goodIntroduceItem' wx:for="{{item.goodDetailImgUrl}}">
+                                <image src="{{item}}" mode="widthFix"></image>
+                        </view>
+                </view>
+                
+                <!-- 加入购物车 -->
+                <view class='addToCartBox'>
+                        <view class='addCartBox fl' bindtap='chouseSpecBoxShow'>
+                                <view class='imgBox'>
+                                        <image src='http://www.hs1105.com/static/home/images/is-cart.png'></image>
+                                        
+                                </view>
+                                <text>加入购物车</text>
+                        </view>
+                        <view class='buyNowBox fr' bindtap='buyRightNowBoxShow'>
+                                <text>立即购买</text>
+                        </view>
+                </view>
+
+                <!-- 模态框-加入购物车 -->
+                <view class='maskBox clearfix' wx:if='{{chouseSpecBoxStatus}}'>
+                        <view class='mask' bindtap='chouseSpecBoxHide'></view>
+                        <view class='chouseSpecBox'>
+                                <view class='goodImgBox'>
+                                        <image src='{{item.goodImgUrl}}'></image>
+                                </view>
+                                <view class='maskGoodPriceBox'>
+                                        <text>￥{{item.goodPrice}}</text>
+                                </view>
+                                <view class='goodSpecBox clearfix'>
+                                        <text wx:for="{{item.goodSpec}}" data-currentIndex='{{index}}' data-specid='{{item.specId}}' bindtap='chooseThisSpec' class="{{isCurrentIndex==index?'active':''}}">{{item.spec}}</text>
+                                </view>
+                                <view class='wnnaBiyNums'>
+                                        <text>购买数量:</text>
+                                        <view class='AddOrReduceNumBox'>
+                                        <text class='cartsBtn fl' bindtap='reduceGoodNum'>-</text>{{countNum}} <text class='cartsBtn fr' bindtap='addGoodNum'>+</text>
+                                        </view>
+                                </view>
+                                
+                                <view class='addToCartBtnBox'>
+                                        <view class='addToCarBtn' bindtap='addToCartArr'>
+                                                <text>添加购物车</text>
+                                        </view>
+                                </view>
+                        </view>
+                </view>
+
+                 <!-- 模态框-立即购买 -->
+                <view class='maskBox clearfix' wx:if='{{buyRightNowStatus}}'>
+                        <view class='mask' bindtap='buyRightNowBoxHide'></view>
+                        <view class='chouseSpecBox'>
+                                <view class='goodImgBox'>
+                                        <image src='{{item.goodImgUrl}}'></image>
+                                </view>
+                                <view class='maskGoodPriceBox'>
+                                        <text>￥{{item.goodPrice}}</text>
+                                </view>
+                                <view class='goodSpecBox clearfix'>
+                                        <text wx:for="{{item.goodSpec}}" data-currentIndex='{{index}}' data-specid='{{item.specId}}' bindtap='chooseThisSpec' class="{{isCurrentIndex==index?'active':''}}">{{item.spec}}</text>
+                                </view>
+                                <view class='wnnaBiyNums'>
+                                        <text>购买数量:</text>
+                                        <view class='AddOrReduceNumBox'>
+                                        <text class='cartsBtn fl' bindtap='reduceGoodNum'>-</text>{{countNum}} <text class='cartsBtn fr' bindtap='addGoodNum'>+</text>
+                                        </view>
+                                </view>
+                                
+                                <view class='addToCartBtnBox'>
+                                        <view class='addToCarBtn' bindtap='buyGoodRoghtNow'>
+                                                <text>立即购买</text>
+                                        </view>
+                                </view>
+                        </view>
+                </view>
+
+
+        </view>
+         <!-- 返回顶部 -->
+        <view class="toTop {{btnshow?'btnshow':''}}" bindtap='scrollTop'>
+                <image src='http://www.hs1105.com/static/home/css/css_public/go-top.png'></image>
+        </view>
+</scroll-view>
+<!-- 
+<scroll-view  wx:elese>
+        <view class="lostPageBox">
+                <text bindtap='backToAheadPage'>OU~~~您访问的页面走丢了~~~\n点击我或者上方导航栏返回按钮\n返回上一个页面</text>
+        </view>
+</scroll-view> -->

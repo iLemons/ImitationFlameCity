@@ -1,0 +1,298 @@
+/* pages/mineInfo/mineMsg.wxss */
+
+page{
+        background-color: #EFEFEF;
+}
+.bodyBox{
+        margin-top: 90rpx;
+        height: auto;
+}
+.bodyBox view{
+        box-sizing: border-box;
+}
+
+/* 顶部返回按钮 */
+.backImgBox{
+        position: fixed;
+        top: 0rpx;
+        left: 0rpx;
+        height: 90rpx;
+        width: 90rpx;
+        z-index: 101;
+}
+.backImgBox image{
+        width: 100%;
+        height: 100%;
+}
+
+/* 顶部 */
+.hearder-img-box {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90rpx;
+}
+ .hearder-img-box .header-text {
+        display: block;
+        width: 100%;
+        height: 90rpx;
+        line-height: 90rpx;
+        color: #fff;
+        text-align: center;
+        background-repeat:no-repeat; 
+        background-size:100% 100%;
+} 
+
+/* 购物车空时展示页面 */
+
+.emptyShowBox{
+        background-color: #EDEDED;
+        width: 100%;
+        /* height: 100vh; */
+}
+.contentBox{
+        width: 100%;
+        padding-top: 300rpx;
+}
+.contentBox .emptyImgBox{
+        width: 315rpx;
+        height: 260rpx;
+        margin: 0 auto;
+        /* display: block; */
+}
+.contentBox .emptyImgBox image{
+        width: 100%;
+        height: 100%;
+}
+.contentBox .textBox{
+        width: 100%;
+}
+.contentBox .textBox .textContent{
+        text-align: center;
+}
+
+/* 成为代理 */
+.contentBoxImgBox{
+        width: 100%;
+}
+.contentBoxImgBox{
+        width: 100%;
+        height: auto;
+        padding: 20rpx 35rpx 0;
+}
+.contentBoxImgBox image{
+        width: 100%;
+}
+
+/* 收货地址 */
+.shipAddressContenBox{
+        padding-top: 10rpx;
+}
+.section{
+        height: 120rpx;
+        display: flex;
+        line-height: 120rpx;
+        background-color: #fff;
+        border-bottom: 1rpx solid #eee;
+}
+.section .section__title{
+        text-align: center;
+        flex: 1
+}
+.section.detailAddress{
+        box-sizing: border-box;
+        height: 270rpx;
+        margin-bottom: 30rpx;
+}
+
+.section input{
+        margin-top: 35rpx;
+        flex: 2;
+}
+.section .textBox{
+        margin-top: 35rpx;
+        padding-right: 30rpx;
+        height: 150rpx;
+        flex: 2;
+} 
+.section textarea{
+        width: 98%;
+        /* width: 100%; */
+        border-radius: 15rpx;
+        padding: 15rpx;
+        height: 150rpx;
+        background-color: #EEEEEE;
+}
+.section.detailAddress input{
+        height: 120rpx;
+}
+
+.placeholderStyle{
+        font-size: 28rpx;
+}
+.placeholderStyleDetail{
+        font-size: 32rpx;
+        color: #858585;
+}
+        /* 收货-保存按钮 */
+.saveBtnBox{
+        margin-top: 50rpx;
+        width: 100%;
+        /* text-align: center; */
+}
+.saveBtnContent{
+        width: 80%;
+        height: 100rpx;
+        margin: 0 auto;
+        border-radius: 10rpx;
+        text-align: center;
+        line-height: 100rpx;
+        box-shadow: 0rpx 0rpx 20rpx rgb(95, 30, 14);
+        background-color: #CE4729;
+}
+.saveBtn{
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 36rpx;
+}
+
+/* 意见反馈 */
+
+.feedBacktextBox{
+        margin-top: 105rpx;
+}
+.feedBackcontentBox{
+        position: relative;
+        width: 100%;
+        height: 240rpx;
+        background-color: #fff;
+}
+.feedBackcontent{
+        width: 100%;
+        height: 100%;
+}
+.feedBackcontentBox textarea{
+        box-sizing: border-box;
+        padding: 30rpx;
+        width: 100%;
+        height: 100%;
+}
+
+.textAcountBox{
+        position: absolute;
+        right: 15rpx;
+        bottom: 15rpx;
+}
+.acountBox{
+        font-size: 30rpx;
+        color: #858585;
+}
+        /* 上传图片选择框部分 */
+.updateImgTitleBox{
+        width: 100%;
+}
+.upImgContentBox{
+        width: 100%;
+        height: 100%;
+}
+.upImgTitle{
+        width: 100%;
+        height: 100%;
+        line-height: 110rpx;
+        font-size: 34rpx;
+        padding-left: 30rpx;
+}
+
+.updateImgBtnBox{
+        width: 100%;
+        height: 200rpx;
+        /* line-height: 200rpx; */
+        padding-top: 20rpx;
+        padding-left: 25rpx;
+        background-color: #fff;
+}
+.upImgBtnContentBox,.upImgBox{
+        float: left;
+        width: 160rpx;
+        height: 160rpx;
+        margin-right: 30rpx;
+        border-radius: 8rpx;
+        overflow: hidden;
+}
+.upImgBtnContentBox{
+        margin-right: 0rpx;
+}
+.upImgBtnContentBox image,.upImgBox image{
+        width: 100%;
+        height: 100%;
+}
+
+
+        /* 关于我们 */
+.contentTopBox{
+        width: 100%;
+        background-color: #fff;
+        font-size: 36rpx;
+        padding: 15rpx;
+}
+.customerTelCol{
+        color: rgb(78, 64, 221);
+        text-decoration: underline;
+}
+
+.contentTop_imgBox{
+        width: 100%;
+}
+.contentTopImg{
+        margin: 20rpx auto;
+        width: 240rpx;
+        height: 240rpx;
+}
+.contentTopImg image{
+        width: 100%;
+        height: 100%;
+}
+
+        /* 客服常见问题标题 */
+.commonProblemTitle{
+        width: 100%;
+        height: 90rpx;
+        line-height: 90rpx;
+        padding-left: 15rpx;
+}
+.commonProblemTitle text{
+        font-size: 36rpx;
+}
+        /* 常见问题内容部分 */
+.commonCustomerProblemBox{
+        width: 100%;
+        background-color: #fff;
+        padding: 15rpx;
+        font-size: 34rpx;
+}
+.commonCustomerProblemBox text{
+        color: rgb(137, 137, 137);
+        height: 50rpx;
+        line-height: 50rpx;
+        word-wrap: break-word;
+}
+.commonCustomerProblemBox .question{
+        color: rgb(78, 64, 221);
+        height: 80rpx;
+        line-height: 80rpx;
+}
+.questionBox{
+        margin-bottom: 15rpx;
+}
+.commonCustomerProblemBox .spcStyle{
+        color: #000;
+        text-decoration: underline;
+        font-weight: bold;
+}
+.addMarginTop{
+        /* display: block; */
+        margin-top: 30rpx;
+}
