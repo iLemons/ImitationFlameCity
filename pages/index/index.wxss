@@ -149,8 +149,8 @@ swiper image{
         margin: 10rpx 0;
         padding-left: 30rpx;
         color: #D14627;
-        font-size: 48rpx;
-        height: 48rpx;
+        font-size: 40rpx;
+        height: 40rpx;
         line-height: 1;
 }
 .goodsBox .goodItem .goodPrice::before{
@@ -159,8 +159,8 @@ swiper image{
         left: -6rpx;
         content: '￥';
         color: #CD472A;
-        font-size: 48rpx;
-        height: 48rpx;
+        font-size: 40rpx;
+        height: 40rpx;
         line-height: 1;
 }
 .goodsBox .goodItem .oldPrice{
