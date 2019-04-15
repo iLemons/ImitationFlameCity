@@ -11,7 +11,7 @@
         "window": {
                 "backgroundTextStyle": "light",
                 "navigationBarBackgroundColor": "#F2F2F2",
-                "navigationBarTitleText": "FireCity",
+                "navigationBarTitleText": "FlameCity",
                 "navigationBarTextStyle": "black"
         },
         "tabBar": {
