@@ -25,6 +25,7 @@ Page({
                 that.setData({
                         locPageHeaderBgImgUrl: app.globalData.pageHeaderBgImgUrl
                 })
+                console.log(app.globalData.wanaBuyArr)
         },
         // 去往结算页面
         goToconfirmOfOrderPage:function(){

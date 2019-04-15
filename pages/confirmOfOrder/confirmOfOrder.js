@@ -17,11 +17,11 @@ Page({
         onLoad: function (options) {
                 // 判断数据是有哪个页面过来
                 let dataType = options.buyRightNow
-                if (options.buyRightNow){
+                if (options.buyRightNow == 1){
                         this.setData({
                                 locWanaBuyArr: app.globalData.buyRightNowArr
                         })
-                }else{
+                } else if (options.buyRightNow == 0){
                         this.setData({
                                 locWanaBuyArr: app.globalData.wanaBuyArr
                         })
