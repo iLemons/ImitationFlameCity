@@ -2727,7 +2727,7 @@ App({
         receiverInfo:{
                 "name":"岑军",
                 "phone":"18333333333",
-                "address":"重庆涌上是打发"
+                "address":"重庆市渝北区"
         }
   }
 })

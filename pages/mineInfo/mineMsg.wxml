@@ -191,10 +191,12 @@
                         <input value="{{receiverMsg.phone}}" bindinput="personPhoneNumInput" placeholder="请填写手机号码" placeholder-class="placeholderStyle"/>
                 </view>
                         <!-- 详细地址 -->
-                <view class="section detailAddress">
+                <view class="section detailAddress clearfix">
                         <view class="section__title ">详细地址:</view>
-                        <view class='textBox'>
-                        <textarea value="{{receiverMsg.address}}" bindinput="detailAddressInput" placeholder="请填写详细地址" placeholder-class="placeholderStyleDetail"/>
+                        <view class='sectionRightBox'>
+                                <view class='textBox'>
+                                <textarea value="{{receiverMsg.address}}" bindinput="detailAddressInput" placeholder="请填写详细地址" placeholder-class="placeholderStyle"/>
+                                </view>
                         </view>
                 </view>
 
